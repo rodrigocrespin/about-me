@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg fixed-top" color-on-scroll="100" id="navbar-top"
+  [class.bg-danger]="pageYOffset > 100" [class.navbar-transparent]="pageYOffset <= 100">
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" [routerLink]="['/home']" target="_blank">
+        <span>{{'{ Rodrigo Crespin }'}}</span> Full stack developer
+      </a>
+      <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler"
+        [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" type="button">
+        <span class="navbar-toggler-bar bar1"> </span>
+        <span class="navbar-toggler-bar bar2"> </span>
+        <span class="navbar-toggler-bar bar3"> </span>
+      </button>
+    </div>
+    <div class="navbar-collapse justify-content-end" [collapse]="isCollapsed">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand"><a>Rodrigo Crespin</a></div>
+          <div class="col-6 collapse-close text-right">
+            <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler"
+              [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" type="button">
+              <i class="tim-icons icon-simple-remove"> </i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item p-0">
+          <a class="nav-link" href="https://github.com/rodrigocrespin" placement="bottom"
+            target="_blank" tooltip="Follow me on GitHub">
+            <i class="fab fa-github"> </i>
+            <p class="d-lg-none d-xl-none">GitHub</p>
+          </a>
+        </li>
+        <li class="nav-item p-0">
+          <a class="nav-link" href="https://www.linkedin.com/in/rodrigocrespin/" placement="bottom"
+            target="_blank" tooltip="Connect with me on LinkedIn">
+            <i class="fab fa-linkedin"> </i>
+            <p class="d-lg-none d-xl-none">LinkedIn</p>
+          </a>
+        </li>
+        <li class="nav-item p-0">
+          <a class="nav-link" href="https://www.instagram.com/chinocrespin" placement="bottom"
+            target="_blank" tooltip="Follow me on Instagram">
+            <i class="fab fa-instagram"> </i>
+            <p class="d-lg-none d-xl-none">Instagram</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
