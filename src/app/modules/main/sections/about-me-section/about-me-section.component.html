@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row row-grid justify-content-between">
+    <div class="col-md-6">
+      <div class="px-md-5">
+        <hr class="line-success" />
+        <h3>About me</h3>
+        <p>
+          I'm always trying to keep on the latest technologies. My code skills let me to program clean and efficiently.
+          I enjoy investigating and learning new code skills. Passionate about my work.
+          Proactive, responsible and capable to work in teams.
+        </p>
+        <ul class="list-unstyled mt-5">
+          <li *ngFor="let item of experienceItems" class="py-2">
+            <div class="d-flex align-items-center">
+              <div class="icon icon-success mb-2">
+                <i class="{{item.iconClass}}"> </i>
+              </div>
+              <div class="ml-3"><h6>{{item.description}}</h6></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <img class="img-fluid floating" src="assets/img/bitmoji.png" />
+
+      <div class="card card-stats bg-danger">
+        <div class="card-body">
+          <div class="justify-content-center">
+            <div class="numbers">
+              <p class="card-title">6 years</p>
+              <p class="card-category text-white">Coding</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-stats bg-info">
+        <div class="card-body">
+          <div class="justify-content-center">
+            <div class="numbers">
+              <p class="card-title">Full stack</p>
+              <p class="card-category text-white">.NET & Angular</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-stats bg-default">
+        <div class="card-body">
+          <div class="justify-content-center">
+            <div class="numbers">
+              <p class="card-title">+20</p>
+              <p class="card-category text-white">Projects</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
