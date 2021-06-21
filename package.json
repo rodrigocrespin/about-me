@@ -6,7 +6,7 @@
     "start": "ng serve --port 27101 --open",
     "start:prod": "ng serve --port 27101 --open --prod",
     "build": "ng build",
-    "build:ci": "ng build --prod --sourceMap=false --base-href about-me",
+    "build:ci": "ng build --prod --sourceMap=false --base-href /about-me/",
     "build:prod": "ng build --prod",
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCI --reporters=progress,junit",
