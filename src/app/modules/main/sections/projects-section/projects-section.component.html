@@ -1,0 +1,35 @@
+<div *ngIf="model$|async as model" class="container">
+  <div class="row justify-content-between">
+    <div class="col-md-6">
+      <div class="row justify-content-between align-items-center">
+        <carousel class="carousel slide" [isAnimated]="true" [showIndicators]="false" (activeSlideChange)="slideChange($event)">
+          <slide *ngFor="let project of model.projects">
+            <img [alt]="project.id" class="d-block" [src]="project.imgUrl"/>
+            <!--<div class="carousel-caption d-none d-md-block">
+              <h5 class="text-primary">Logistics management system</h5>
+            </div>-->
+          </slide>
+        </carousel>
+      </div>
+    </div>
+    <div *ngIf="model.current as current" class="col-md-5">
+      <hr class="line-success" />
+      <h3 class="profile-title text-left">Projects</h3>
+      <h5 class="text-success">{{current.name}}</h5>
+      <p class="profile-description text-left">
+        An artist of considerable range, Ryan â the name taken by
+        Melbourne-raised, Brooklyn-based Nick Murphy â writes, performs and
+        records all of his own music, giving it a warm, intimate feel with a
+        solid groove structure. An artist of considerable range.
+      </p>
+      <div class="btn-wrapper pt-3">
+        <button class="btn btn-simple btn-danger mr-1">
+          <i class="tim-icons icon-book-bookmark"> </i> Bookmark
+        </button>
+        <button class="btn btn-simple btn-info">
+          <i class="tim-icons icon-bulb-63"> </i> Check it!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
