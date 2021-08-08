@@ -1,17 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { combineLatest, Observable, of, Subject } from 'rxjs';
+import { combineLatest, Observable, Subject } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { Project } from 'src/app/models/project';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 interface ProjectsModel {
   projects: Project[];
   current?: Project;
-}
-
-interface Project {
-  id: string;
-  name: string;
-  imgUrl: string;
-  description?: string;
 }
 
 @Component({
@@ -24,13 +19,9 @@ export class ProjectsSectionComponent {
   model$: Observable<ProjectsModel>;
   private loadProjectSubject = new Subject<number>();
 
-  constructor() {
-    const projects$ = of([
-      { id: 'SP', name: 'Logistics management system', imgUrl: 'assets/img/sp_main.png' },
-      { id: 'DMA', name: 'Stocks DMA', imgUrl: 'assets/img/dma_1.png' },
-    ] as Project[]);
+  constructor(private projectsService: ProjectsService) {
     const currentIndex$ = this.loadProjectSubject.pipe(startWith(0));
-    this.model$ = combineLatest([projects$, currentIndex$]).pipe(
+    this.model$ = combineLatest([projectsService.get(), currentIndex$]).pipe(
       map(([projects, currentIndex]) => ({
         projects, current: projects[currentIndex]
       }))
