@@ -1,0 +1,27 @@
+<div *ngIf="model$|async as model" class="container">
+  <div class="row justify-content-between">
+    <div class="col-md-6">
+      <div class="row justify-content-between align-items-center">
+        <carousel class="carousel slide" [isAnimated]="true" [showIndicators]="false" (activeSlideChange)="slideChange($event)">
+          <slide *ngFor="let project of model.projects">
+            <img [alt]="project.id" class="d-block" [src]="project.imgUrl"/>
+          </slide>
+        </carousel>
+      </div>
+    </div>
+    <div *ngIf="model.current as current" class="col-md-5">
+      <hr class="line-success" />
+      <h3 class="profile-title text-left">Projects</h3>
+      <h5 class="text-success">{{current.name}}</h5>
+      <p *ngIf="current.description as description" [innerHTML]="description"></p>
+      <div class="btn-wrapper pt-3">
+        <button class="btn btn-simple btn-danger mr-1">
+          <i class="tim-icons icon-paper"> </i> More details
+        </button>
+        <a *ngIf="current.url as url" class="btn btn-simple btn-info" [href]="url" target="_blank">
+          <i class="tim-icons icon-bulb-63"> </i> Check it out!
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
