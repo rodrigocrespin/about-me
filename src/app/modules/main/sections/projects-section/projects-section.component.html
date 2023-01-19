@@ -14,6 +14,11 @@
       <h3 class="profile-title text-left">Projects</h3>
       <h5 class="text-success">{{current.name}}</h5>
       <p *ngIf="current.description as description" [innerHTML]="description"></p>
+      <div *ngIf="current.tags as tags">
+        <span *ngFor="let tag of tags" class="badge badge-primary mr-1">
+          {{ tag }}
+        </span>
+      </div>
       <div class="btn-wrapper pt-3">
         <a *ngIf="current.link as link" class="btn btn-simple btn-danger mr-1" [routerLink]="link">
           <i class="tim-icons icon-paper"> </i> More details

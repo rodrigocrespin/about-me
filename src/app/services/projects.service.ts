@@ -17,7 +17,8 @@ export class ProjectsService {
           <br>
           The main idea is to make the crypto investment easy-to-use and a bit fun too.
           It can be used anonymously, or you can create your own user
-          (<a href="https://auth0.com/" target="_blank">Auth0</a> user authentication & management).`
+          (<a href="https://auth0.com/" target="_blank">Auth0</a> user authentication & management).`,
+      tags: ['.NET', 'Angular', 'Binance', 'Blockchain', 'Crypto', 'Auth0', 'Azure']
     },
     {
       id: 'SP',
@@ -27,7 +28,8 @@ export class ProjectsService {
           It is an logistics web management system developed for a local food distributor, which required to keep
           track of its customers, their orders, their payments and balances owed, employees, their commissions,
           price lists, products and stock control . It also has a mobile development through which employees can consult
-          and assemble orders to send.`
+          and assemble orders to send.`,
+      tags: ['.NET', 'Angular', 'AWS', 'MySQL']
     },
     {
       id: 'DMA',
@@ -43,7 +45,8 @@ export class ProjectsService {
           Also the application makes it's own connections to the markets to request the account information to validate
           that every operation has its economic support.
           <br>
-          It has both a web module and a mobile app, available for iOS and Android.`
+          It has both a web module and a mobile app, available for iOS and Android.`,
+      tags: ['.NET', 'Angular', 'Real-time', 'Stock market', 'Docker']
     },
     {
       id: 'USP',
@@ -55,7 +58,8 @@ export class ProjectsService {
           smaller clinical trials. With USP, the population can be organized in target groups based on different
           parameters (such as the client’s age, gender, living area, previous studies result, etc). Based on these
           parameters each client is invited for a specific screening workflow and tracked from the first contact
-          until the end of the screening.`
+          until the end of the screening.`,
+      tags: ['.NET', 'Angular', 'Microservices', 'RabbitMQ', 'Docker', 'Kubernetes']
     }
   ];
 
