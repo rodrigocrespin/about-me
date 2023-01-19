@@ -14,7 +14,7 @@ interface SkillModel {
 })
 export class SkillsSectionComponent {
   skills: SkillModel[] = [
-    { description: '.NET 5', imgUrl: 'assets/img/dotnet.svg' },
+    { description: '.NET', imgUrl: 'assets/img/dotnet.svg' },
     { description: 'Angular', imgUrl: 'assets/img/angular.png' },
     { description: 'Docker', imgUrl: 'assets/img/docker.png' },
     { description: 'NgRx', imgUrl: 'assets/img/ngrx.svg' },
