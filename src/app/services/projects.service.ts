@@ -6,6 +6,20 @@ import { Project } from 'src/app/models/project';
 export class ProjectsService {
   private projects = [
     {
+      id: 'CIM',
+      name: 'Crypto Investment Monitor',
+      imgUrl: 'assets/img/investment-monitor.png',
+      url: 'https://investment-monitor.netlify.app/',
+      description: `
+          It centralizes cryptocurrencies market values in real-time and keeps an eye 24/7 of your own investment portfolio.
+          It's developed in .NET and Angular, and it involves a lot of market knowledge,
+          web socket connections & real-time updates in the UI with help of reactive state.
+          <br>
+          The main idea is to make the crypto investment easy-to-use and a bit fun too.
+          It can be used anonymously, or you can create your own user
+          (<a href="https://auth0.com/" target="_blank">Auth0</a> user authentication & management).`
+    },
+    {
       id: 'SP',
       name: 'Logistics management system',
       imgUrl: 'assets/img/sp_main.png',
@@ -35,7 +49,7 @@ export class ProjectsService {
       id: 'USP',
       name: 'Unified Screening Platform',
       imgUrl: 'assets/img/usp.png',
-      url: 'https://www.radventure.com/solutions/unified-screening-platform/',
+      url: 'https://www.nelson-plus.org/',
       description: `
           USP is a flexible data management software environment that supports large scale screening programs but also
           smaller clinical trials. With USP, the population can be organized in target groups based on different
