@@ -12,23 +12,26 @@
       <h3>
         Hi! I am a .NET full stack developer, with good knowledge and experience in many web stack projects
       </h3>
+      <app-scroll-button [scrollToTop]="aboutMe.offsetTop - 80"></app-scroll-button>
     </div>
   </div>
 </div>
 
-<section class="section section-lg section-safe">
+<section class="section section-lg section-safe" #aboutMe>
   <img class="path" src="assets/img/path4.png" />
   <app-about-me-section></app-about-me-section>
 </section>
+<app-scroll-button [scrollToTop]="skills.offsetTop" [gradientA]="'#1d8cf8'" [gradientB]="'#344675'"></app-scroll-button>
 
-<section class="section section-lg">
+<section class="section section-lg" #skills>
   <img class="path" src="assets/img/path4.png" />
   <img class="path2" src="assets/img/path5.png" />
   <img class="path3" src="assets/img/path2.png" />
   <app-skills-section></app-skills-section>
 </section>
+<app-scroll-button [scrollToTop]="projects.offsetTop + 80" [gradientA]="'#ff8d72'" [gradientB]="'#fd5d93'"></app-scroll-button>
 
-<section class="section section-lg">
+<section class="section section-lg" #projects>
   <img class="path" src="assets/img/path4.png" />
   <app-projects-section></app-projects-section>
 </section>
